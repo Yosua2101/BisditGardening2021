@@ -1,14 +1,147 @@
 <!doctype html>
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="./assets/css/filterlist.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>List Mitra</title>
+    <style>
+/* Navigation Menu */
+.navbar {
+overflow: hidden;
+background-color: #064e3b;
+}
+
+/* Navigation links */
+.navbar a {
+float: left;
+font-size: 16px;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+margin-top: 10px;
+margin-bottom: 0px;
+}
+
+/* The subnavigation menu */
+.subnav {
+float: left;
+overflow: hidden;
+}
+
+/* Subnav button */
+.subnav .subnavbtn {
+font-size: 16px;
+border: none;
+outline: none;
+color: white;
+padding: 14px 16px;
+background-color: inherit;
+font-family: inherit;
+margin: 0;
+margin-top: 10px;
+margin-bottom: 0px;
+}
+
+/* Add a red background color to navigation links on hover */
+.navbar a:hover, .subnav:hover .subnavbtn {
+background-color: #1e40af;
+}
+
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+display: none;
+position: absolute;
+left: 0;
+background-color: #064e3b;
+width: 100%;
+z-index: 1;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+float: left;
+color: white;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+background-color: #eee;
+color: black;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+display: block;
+background-color: #1e40af;
+}
+
+/* Style the search box inside the navigation bar */
+.navbar .search-container {
+  float: right;
+}
+
+.navbar input[type=text] {
+  padding: 6px 10px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  margin-right: 30px;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+}
+</style>
 </head>
-<body class="bg-gray-50">
-    <h1 class=" text-center text-gray-900 text-3xl title-font font-medium mb-1 py-1">List Mitra</h1>
+<body class="bg-white">
+<!-- The navigation menu -->
+<div class="navbar">
+    <a href="home.html">Beranda</a>
+    <div class="subnav">
+      <button class="subnavbtn">Tanaman <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="caritanaman.html">Tanaman Hias</a>
+        <a href="tanamanbuah.html">Tanaman Buah</a>
+        <a href="tanamansayur.html">Tanaman Sayur</a>
+        <a href="toga.html">TOGA</a>
+      </div>
+    </div>
+    <div class="subnav">
+      <button class="subnavbtn">Alat Berkebun <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="pupuk.html">Pupuk</a>
+        <a href="pot.html">Pot</a>
+        <a href="mediatanam.html">Media Tanam</a>
+        <a href="alatalat.html">Alat-alat</a>
+      </div>
+    </div>
+      <a href="listmitra.html">Mitra</a>
+      <!--Search bar-->
+      <div class="search-container">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Cari" name="search">
+        </form>
+      </div>
+  </div> 
+
+<!--List Mitra-->
+    <h1 class=" text-center text-gray-900 text-3xl title-font font-medium mb-1 py-1 pt-16"><b>List Mitra</b></h1>
   <div class="container mx-auto my-5 p-5">
     <div class=" md:flex no-wrap md:-mx-2 ">
         <!-- Left Side -->
@@ -20,7 +153,7 @@
                         src="img\tamanku.jpg"
                         alt="">
                 </div>
-                <h1 class="text-gray-900 font-bold text-xl text-center leading-8 my-1 ">Tamanku Surabaya</h1>
+                <h1 class="text-gray-900 font-bold text-xl text-center leading-8 my-1 "><a href="profilmitra.html">Tamanku Surabaya</a></h1>
                 <p class="text-sm text-gray-500 hover:text-gray-600 leading-6">Lorem ipsum dolor sit amet
                     consectetur adipisicing elit.
                     Reprehenderit, eligendi dolorum sequi illum qui unde aspernatur non deserunt</p>
@@ -42,7 +175,7 @@
                         src="img\tamanku.jpg"
                         alt="">
                 </div>
-                <h1 class="text-gray-900 font-bold text-xl text-center leading-8 my-1 ">Tamanku Surabaya</h1>
+                <h1 class="text-gray-900 font-bold text-xl text-center leading-8 my-1 "><a href="profilmitra.html">Tamanku Surabaya</a></h1>
                 <p class="text-sm text-gray-500 hover:text-gray-600 leading-6">Lorem ipsum dolor sit amet
                     consectetur adipisicing elit.
                     Reprehenderit, eligendi dolorum sequi illum qui unde aspernatur non deserunt</p>
@@ -64,7 +197,7 @@
                         src="img\tamanku.jpg"
                         alt="">
                 </div>
-                <h1 class="text-gray-900 font-bold text-xl text-center leading-8 my-1 ">Tamanku Surabaya</h1>
+                <h1 class="text-gray-900 font-bold text-xl text-center leading-8 my-1 "><a href="profilmitra.html">Tamanku Surabaya</a></h1>
                 <p class="text-sm text-gray-500 hover:text-gray-600 leading-6">Lorem ipsum dolor sit amet
                     consectetur adipisicing elit.
                     Reprehenderit, eligendi dolorum sequi illum qui unde aspernatur non deserunt</p>
@@ -86,7 +219,7 @@
                         src="img\tamanku.jpg"
                         alt="">
                 </div>
-                <h1 class="text-gray-900 font-bold text-xl text-center leading-8 my-1 ">Tamanku Surabaya</h1>
+                <h1 class="text-gray-900 font-bold text-xl text-center leading-8 my-1 "><a href="profilmitra.html">Tamanku Surabaya</a></h1>
                 <p class="text-sm text-gray-500 hover:text-gray-600 leading-6">Lorem ipsum dolor sit amet
                     consectetur adipisicing elit.
                     Reprehenderit, eligendi dolorum sequi illum qui unde aspernatur non deserunt</p>
@@ -101,7 +234,6 @@
             <button class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Cari Info Selengkapnya</button>
         </div>
         
-
 
  
 </body>
