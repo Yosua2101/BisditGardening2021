@@ -9,7 +9,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -138,8 +138,55 @@ background-color: #1e40af;
     </div>
 </div> 
 
+  <!-- Search Filter -->
+  <div class="container h-500 mx-auto flex justify-center items-center p-2 md:pt-16">
+    <div class="border border-gray-100 p-6 grid grid-cols-1 gap-6 bg-white shadow-lg rounded-lg">
+      <div class="flex flex-col md:flex-row">
+        <div class="">
+          <select class="border p-2 rounded">
+            <option>Tanaman Indoor</option>
+            <option>Tanaman Outdoor</option>
+          </select>
+        </div>
+        <div class="pt-6 md:pt-0 md:pl-6">
+          <select class="border p-2 rounded">
+            <option>Mitra 1</option>
+            <option>Mitra 2</option>
+            <option>Mitra 3</option>
+            <option>Mitra 4</option>
+          </select>
+        </div>
+        <div class="pt-6 md:pt-0 md:pl-6">
+          <select class="border p-2 rounded">
+            <option>&#60; Rp 50.000,00</option>
+            <option>Rp 50.000,00 - Rp 150.000,00</option>
+            <option>&#62; Rp 150.000,00</option>
+          </select>
+        </div>
+        <div class="pt-6 md:pt-0 md:pl-6">
+          <select class="border p-2 rounded">
+            <option>Ruang Sempit</option>
+            <option>Pekarangan</option>
+            <option>Kesehatan</option>
+            <option>Hadiah</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+        <div class="grid grid-cols-1 gap-2 border border-gray-200 p-2 rounded">
+          <div class="flex border rounded bg-gray-300 items-center p-2 ">
+            <input type="text" placeholder="Enter text here..."
+                 class="bg-gray-300 max-w-full focus:outline-none text-gray-700"/>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center"><button class="p-2 border w-1/4 rounded-md bg-green-900 text-white">Search</button></div>
+    </div>
+  </div>
+
+
 <!--daftar tanaman-->
-<div class="flex items-center justify-center text-xl font-semibold my-2" style="padding: 50px 0px 0px 0px" ><h1><b>Daftar Tanaman Hias</b></h1></div>
+<h1 class=" text-center text-gray-900 text-3xl title-font font-medium mb-1 py-2 pt-10"><b>Daftar Tanaman</b></h1>
 <div class="flex items-center justify-center">
   <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
       <!-- 1 card -->
