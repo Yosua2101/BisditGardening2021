@@ -14,7 +14,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Cari Tanaman</title>
+  <title>Tanaman Hias</title>
 <style>
 .navbar {
 overflow: hidden;
@@ -88,7 +88,7 @@ display: block;
 <body>
 <!-- The navigation menu -->
 <div class="navbar">
-  <a href="#home">Beranda</a>
+  <a href="home.html">Beranda</a>
   <div class="subnav">
     <button class="subnavbtn">Tanaman <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
@@ -101,19 +101,17 @@ display: block;
   <div class="subnav">
     <button class="subnavbtn">Alat Berkebun <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
-      <a href="#bring">Pupuk</a>
-      <a href="#deliver">Media Tanam</a>
-      <a href="#package">Perkakas</a>
-      <a href="#express">Express</a>
+      <a href="#">Pupuk</a>
+      <a href="#">Pot</a>
+      <a href="#">Media Tanam</a>
+      <a href="#">Alat-alat</a>
     </div>
   </div>
-  <div class="subnav">
-    <button class="subnavbtn">Mitra </button>
-  </div>
+    <a href="listmitra.html">Mitra</a>
 </div> 
 
 <!--hasil pencarian-->
-<div class="flex items-center justify-center" style="padding: 50px 0px 0px 0px" ><h1><b>Daftar Tanaman Hias</b></h1></div>
+<div class="flex items-center justify-center text-xl font-semibold my-2" style="padding: 50px 0px 0px 0px" ><h1><b>Daftar Tanaman Hias</b></h1></div>
 <div class="flex items-center justify-center">
   <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
       <!-- 1 card -->
@@ -267,7 +265,7 @@ display: block;
                   <img src="https://www.dropbox.com/s/1hl2xkhftcdzis6/tanaman-bunga-bougenville.jpg?raw=1" 
                   class="w-auto" style="border-radius: 5%"/>
               </div>
-              <p class="text-xl font-semibold my-2">Philodendron Lynette</p>
+              <p class="text-xl font-semibold my-2"><a href="detailtanaman.html">Philodendron Lynette</a></p>
               <div class="flex space-x-2 text-black-400 text-sm">
                   <!-- svg -->
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash" viewBox="0 0 16 16">
@@ -329,14 +327,14 @@ display: block;
       <div class="w-full sm:w-1/5 flex flex-col space-y-4">
         <a class="opacity-60"><b>Informasi</b></a>
         <a class="opacity-60">Tentang Kami</a>
-        <a class="opacity-60">Mitra Kami</a>
+        <a class="opacity-60" href="listmitra.html">Mitra Kami</a>
         <a class="opacity-60">Privacy Policy</a>
         <a class="opacity-60">Syarat dan Kebijakan</a>
       </div>
       <div class="w-full sm:w-1/5 flex flex-col space-y-4">
         <a class="opacity-60"><b>Produk dan Layanan</b></a>
-        <a class="opacity-60">Tanaman</a>
-        <a class="opacity-60">Alat Berkebun</a>
+        <a class="opacity-60" href="caritanaman.html">Tanaman</a>
+        <a class="opacity-60" href="carialatberkebun.html">Alat Berkebun</a>
       </div>
       <div class="w-full sm:w-1/5 pt-6 flex items-end mb-1">
         <div class="flex flex-row space-x-4">
