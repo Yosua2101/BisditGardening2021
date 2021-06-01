@@ -29,6 +29,8 @@ color: white;
 text-align: center;
 padding: 14px 16px;
 text-decoration: none;
+margin-top: 10px;
+margin-bottom: 0px;
 }
 
 /* The subnavigation menu */
@@ -47,6 +49,8 @@ padding: 14px 16px;
 background-color: inherit;
 font-family: inherit;
 margin: 0;
+margin-top: 10px;
+margin-bottom: 0px;
 }
 
 /* Add a red background color to navigation links on hover */
@@ -82,7 +86,24 @@ color: black;
 /* When you move the mouse over the subnav container, open the subnav content */
 .subnav:hover .subnav-content {
 display: block;
-}  
+background-color: #1e40af;
+}
+
+/* Style the search box inside the navigation bar */
+.navbar .search-container {
+  float: right;
+}
+
+.navbar input[type=text] {
+  padding: 6px 10px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  margin-right: 30px;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+}
+
 </style>
 </head>
 <body>
@@ -109,24 +130,14 @@ display: block;
   </div>
     <a href="listmitra.html">Mitra</a>
     <!--Search bar-->
-    <div class="relative mx-auto text-gray-600 lg:block hidden">
-      <input
-        class="border-2 border-gray-300 bg-white h-10 pl-2 pr-8 rounded-lg text-sm focus:outline-none"
-        type="search" name="search" placeholder="Search">
-      <button type="submit" class="absolute right-0 top-0 mt-3 mr-2">
-        <svg class="text-white h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
-           version="1.1" id="Capa_1" x="0px" y="0px"
-           viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;"
-           xml:space="preserve"
-           width="512px" height="512px">
-      <path
-        d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"/>
-      </svg>
-      </button>
+    <div class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Cari" name="search">
+      </form>
     </div>
 </div> 
 
-<!--hasil pencarian-->
+<!--daftar tanaman-->
 <div class="flex items-center justify-center text-xl font-semibold my-2" style="padding: 50px 0px 0px 0px" ><h1><b>Daftar Tanaman Hias</b></h1></div>
 <div class="flex items-center justify-center">
   <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
@@ -338,19 +349,19 @@ display: block;
           </defs>
           <rect id="ETI-Logo" width="160" height="57" fill="url(#pattern)" />
         </svg>
-        <p class="opacity-60">Website UMKM Produk Tanaman dan Alat Berkebun di Surabaya.</p>
+        <p class="opacity-100">Website UMKM Produk Tanaman dan Alat Berkebun di Surabaya.</p>
       </div>
       <div class="w-full sm:w-1/5 flex flex-col space-y-4">
-        <a class="opacity-60"><b>Informasi</b></a>
-        <a class="opacity-60">Tentang Kami</a>
-        <a class="opacity-60" href="listmitra.html">Mitra Kami</a>
-        <a class="opacity-60">Privacy Policy</a>
-        <a class="opacity-60">Syarat dan Kebijakan</a>
+        <a class="opacity-100"><b>Informasi</b></a>
+        <a class="opacity-100">Tentang Kami</a>
+        <a class="opacity-100" href="listmitra.html">Mitra Kami</a>
+        <a class="opacity-100">Privacy Policy</a>
+        <a class="opacity-100">Syarat dan Kebijakan</a>
       </div>
       <div class="w-full sm:w-1/5 flex flex-col space-y-4">
-        <a class="opacity-60"><b>Produk dan Layanan</b></a>
-        <a class="opacity-60" href="caritanaman.html">Tanaman</a>
-        <a class="opacity-60" href="carialatberkebun.html">Alat Berkebun</a>
+        <a class="opacity-100"><b>Produk dan Layanan</b></a>
+        <a class="opacity-100" href="caritanaman.html">Tanaman</a>
+        <a class="opacity-100" href="carialatberkebun.html">Alat Berkebun</a>
       </div>
       <div class="w-full sm:w-1/5 pt-6 flex items-end mb-1">
         <div class="flex flex-row space-x-4">
