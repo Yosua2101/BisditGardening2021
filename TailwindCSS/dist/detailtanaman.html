@@ -9,15 +9,15 @@
     <style>
         /*each image is referenced twice in the HTML, but each image only needs to be updated in the CSS*/
         .image1 {
-          content: url("https://randomwordgenerator.com/img/picture-generator/52e4d7434f51a914f1dc8460962e33791c3ad6e04e5074417d2c7ed09f4acc_640.jpg")
+          content: url("https://i.ibb.co/F8yz4KN/IMG20210306130226.jpg")
         }
       
         .image2 {
-          content: url("https://randomwordgenerator.com/img/picture-generator/55e8d146425bb10ff3d8992cc12c30771037dbf852547848702a7fd19545_640.jpg")
+          content: url("https://i.ibb.co/vxpSj0j/IMG20210306130233.jpg")
         }
       
         .image3 {
-          content: url("https://randomwordgenerator.com/img/picture-generator/55e8d24b4257ac14f1dc8460962e33791c3ad6e04e507440752972d3924cc6_640.jpg")
+          content: url("https://i.ibb.co/Q81tNbF/IMG20210306130245.jpg")
         }
       
         .image4 {
@@ -38,75 +38,95 @@
         .image8 {
           content: url("https://randomwordgenerator.com/img/picture-generator/55e8d24b4257ac14f1dc8460962e33791c3ad6e04e507440752972d3924cc6_640.jpg")
         }
-        .navbar {
-        overflow: hidden;
-        background-color: #064e3b;
-        }
-  
-        /* Navigation links */
-        .navbar a {
-        float: left;
-        font-size: 16px;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        }
-  
-        /* The subnavigation menu */
-        .subnav {
-        float: left;
-        overflow: hidden;
-        }
-  
-        /* Subnav button */
-        .subnav .subnavbtn {
-        font-size: 16px;
-        border: none;
-        outline: none;
-        color: white;
-        padding: 14px 16px;
-        background-color: inherit;
-        font-family: inherit;
-        margin: 0;
-        }
-  
-        /* Add a red background color to navigation links on hover */
-        .navbar a:hover, .subnav:hover .subnavbtn {
-        background-color: #1e40af;
-        }
-  
-        /* Style the subnav content - positioned absolute */
-        .subnav-content {
-        display: none;
-        position: absolute;
-        left: 0;
-        background-color: #064e3b;
-        width: 100%;
-        z-index: 1;
-        }
-  
-        /* Style the subnav links */
-        .subnav-content a {
-        float: left;
-        color: white;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-        }
-  
-        /* Add a grey background color on hover */
-        .subnav-content a:hover {
-        background-color: #eee;
-        color: black;
-        }
 
-        /* When you move the mouse over the subnav container, open the subnav content */
-        .subnav:hover .subnav-content {
-        display: block;
-        }
-      
+ /* Navigation links */    
+ .navbar {
+  overflow: hidden;
+  background-color: #064e3b;
+  }
+ 
+  /* Navigation links */
+  .navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  }
+ 
+  /* The subnavigation menu */
+  .subnav {
+  float: left;
+  overflow: hidden;
+  }
+ 
+  /* Subnav button */
+  .subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  }
+ 
+  /* Add a red background color to navigation links on hover */
+  .navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: #1e40af;
+  }
+ 
+  /* Style the subnav content - positioned absolute */
+  .subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #064e3b;
+  width: 100%;
+  z-index: 1;
+  }
+ 
+  /* Style the subnav links */
+  .subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  }
+ 
+  /* Add a grey background color on hover */
+  .subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+  }
+ 
+  /* When you move the mouse over the subnav container, open the subnav content */
+  .subnav:hover .subnav-content {
+  display: block;
+  background-color: #1e40af;
+  }
 
+  /* Style the search box inside the navigation bar */
+.navbar .search-container {
+  float: right;
+}
+
+.navbar input[type=text] {
+  padding: 6px 10px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  margin-right: 30px;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+}
 
 /* style carousel 2 */
       .carousel-open:checked + .carousel-item {
@@ -141,41 +161,48 @@
       
           </style>
       <script src="https://kit.fontawesome.com/64de849d60.js" crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap" rel="stylesheet">
+      <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+      <link href="./assets/css/filterlist.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
-  <!-- The navigation menu -->
-  <div class="navbar">
-    <a href="home.html">Beranda</a>
-    <div class="subnav">
-      <button class="subnavbtn">Tanaman <i class="fa fa-caret-down"></i></button>
-      <div class="subnav-content">
-        <a href="caritanaman.html">Tanaman Hias</a>
-        <a href="tanamanbuah.html">Tanaman Buah</a>
-        <a href="tanamansayur.html">Tanaman Sayur</a>
-        <a href="toga.html">TOGA</a>
-      </div>
+<!-- The navigation menu -->
+<div class="navbar">
+  <a href="home.html">Beranda</a>
+  <div class="subnav">
+    <button class="subnavbtn">Tanaman <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="caritanaman.html">Tanaman Hias</a>
+      <a href="tanamanbuah.html">Tanaman Buah</a>
+      <a href="tanamansayur.html">Tanaman Sayur</a>
+      <a href="toga.html">TOGA</a>
     </div>
-    <div class="subnav">
-      <button class="subnavbtn">Alat Berkebun <i class="fa fa-caret-down"></i></button>
-      <div class="subnav-content">
-        <a href="#">Pupuk</a>
-        <a href="#">Pot</a>
-        <a href="#">Media Tanam</a>
-        <a href="#">Alat-alat</a>
-      </div>
-    </div>
-      <a href="listmitra.html">Mitra</a>
   </div>
-
-  <div class='px-5 py-3'>
-    <h3 class="font-bold text-xs" >FUNGSI TANAMAN</h3>    
-    <!-- This is the tags container -->       
-    <div class='my-3 flex flex-wrap -m-1'>
-        <span class="m-1 bg-green-400 hover:bg-gray-300 rounded-full px-2 font-bold text-sm leading-loose cursor-pointer" >Hadiah</span>
-        <span class="m-1 bg-green-400 hover:bg-gray-300 rounded-full px-2 font-bold text-sm leading-loose cursor-pointer">Pengisi Ruang Sempit</span>
-        
-       
+  <div class="subnav">
+    <button class="subnavbtn">Alat Berkebun <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="pupuk.html">Pupuk</a>
+      <a href="pot.html">Pot</a>
+      <a href="mediatanam.html">Media Tanam</a>
+      <a href="alatalat.html">Alat-alat</a>
+    </div>
+  </div>
+    <a href="listmitra.html">Mitra</a>
+    <!--Search bar-->
+    <div class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Cari" name="search">
+      </form>
     </div>
 </div>
 
@@ -190,90 +217,56 @@
 
         <!-- PUNYA TITAN -->  
         <div class="col-start-3 col-end-5 md:flex justify-center py-16">  
-            <section class="mx-auto max-w-2xl">
-                <div class="shadow-2xl relative">
-                  <!-- large image on slides -->
-                  <div class="mySlides hidden">
-                    <div class="image1 w-full object-cover"></div>
-                  </div>
-                  <div class="mySlides hidden">
-                    <div class="image2 w-full object-cover"></div>
-                  </div>
-                  <div class="mySlides hidden">
-                    <div class="image3 w-full object-cover"></div>
-                  </div>
-                  <div class="mySlides hidden">
-                    <div class="image4 w-full object-cover"></div>
-                  </div>
-                  <div class="mySlides hidden">
-                    <div class="image5 w-full object-cover"></div>
-                  </div>
-            
-                  <!-- butttons -->
-                  <a class="absolute left-0 inset-y-0 flex items-center -mt-50 px-4 text-white hover:text-gray-800 cursor-pointer text-3xl font-extrabold" onclick="plusSlides(-1)">❮</a>
-                  <a class="absolute right-0 inset-y-0 flex items-center -mt-50 px-4 text-white hover:text-gray-800 cursor-pointer text-3xl font-extrabold" onclick="plusSlides(1)">❯</a>
-            
-                  <!-- image description -->
-                  <div class="text-center text-white font-light tracking-wider bg-gray-800 py-2">
-                    <p id="caption"></p>
-                  </div>      
-                </div>
-              </section>
-        </div>  
-        <div class="col-start-6 col-end-10">    
+          <div class="grid grid-rows-1">
+            <div class="row-start-1 row-end-2 object-cover h-40 w-full image1 lg:rounded-lg border-solid border-4 border-gray-500">
+            </div>  
+            <div class="row-start-2 row-end-3 bg-gradient-to-tl to-blue-500 text-white font-semibold flex flex-col">
+              <div class="flex flex-row-reverse flex-wrap m-auto">
+                <button class="rounded px-3 py-2 m-1 border-b-4 border-l-2 shadow-lg bg-green-600 border-green-900 text-white">
+                    Lihat Gambar Lainnya
+                </button>
+              </div>
+            </div>
+          </div>
+        </div> 
+ 
+         <div class="col-start-6 col-end-10 md:flex">    
             <header>
                 <div class="md:flex justify-center py-16 ">
                     <div class="p-8  my-auto ">
-                        <h1 class="text-orange-100 text-xl text-center font-bold"> Philodendron Lynette Philo Linet </h1>
-                        <p class=" text-gray-600 text-xl text-center"> Rp. 100.000,00 - RP. 150.000,00 </p>
+                        <h1 class="text-black-100 text-2xl text-center font-bold"> Philodendron Lynette Philo Linet </h1>
+                        <p class=" text-gray-600 text-2xl text-center"> Rp. 100.000,00 - RP. 150.000,00 </p>
                     </div>
                 </div>
             </header>
         </div>
     </div>
+    
+    <div class="text-center mb-5">
+      <p class="mt-2 text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-2xl">
+        Gambar Penempatan Tanaman di Berbagai Tempat
+      </p>
+    </div>
 
-<div class="grid grid-cols-12 gap-2">
-  <div class="col-start-3 col-end-12 md:flex justify-center py-16 bg-white font-sans leading-normal tracking-normal carousel relative shadow-2xl ">  
-	<div class="carousel-inner relative overflow-hidden w-full">
-	  <!--Slide 1-->
-		<input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-		<div class="carousel-item absolute opacity-0" style="height:50vh;">
-			<div class="block h-full w-full image6 text-white text-5xl text-center">Slide 1</div>
-		</div>
-		<label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-		<label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-		
-		<!--Slide 2-->
-		<input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-		<div class="carousel-item absolute opacity-0" style="height:50vh;">
-			<div class="block h-full w-full image7 text-white text-5xl text-center">Slide 2</div>
-		</div>
-		<label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-		<label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label> 
-		
-		<!--Slide 3-->
-		<input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-		<div class="carousel-item absolute opacity-0" style="height:50vh;">
-			<div class="block h-full w-full image8 text-white text-5xl text-center">Slide 3</div>
-		</div>
-		<label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-		<label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+    <div class="grid grid-cols-12 gap-2 ml-16">
+      <div class="col-start-1 col-end-4 md:flex content-center py-16">  
+        <div class="object-cover h- w-full image1 lg:rounded-lg border-solid border-4 border-gray-500"></div>  
+      </div>
+      <div class="col-start-5 col-end-8 md:flex content-center py-16">  
+        <div class="object-cover h- w-full image2 lg:rounded-lg border-solid border-4 border-gray-500"></div>  
+      </div><div class="col-start-9 col-end-12 md:flex content-center py-16">  
+        <div class="object-cover h- w-full image3 lg:rounded-lg border-solid border-4 border-gray-500"></div>  
+      </div>
+    </div>
 
-		<!-- Add additional indicators for each slide-->
-		<ol class="carousel-indicators">
-			<li class="inline-block mr-3">
-				<label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
-			</li>
-			<li class="inline-block mr-3">
-				<label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
-			</li>
-			<li class="inline-block mr-3">
-				<label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
-			</li>
-		</ol>
-	  </div>
-  </div>
-</div>
+    <div class="bg-gradient-to-tl to-blue-500 text-white font-semibold flex flex-col">
+      <div class="flex flex-row-reverse flex-wrap m-auto">
+        <button class="rounded px-3 py-2 m-1 border-b-4 border-l-2 shadow-lg bg-green-600 border-green-900 text-white">
+            Lihat Gambar Lainnya
+        </button>
+      </div>
+    </div>
+    
     <!-- PUNYA TITAN -->
 
     <!-- PUNYA GIBE -->
@@ -411,17 +404,17 @@
         </p>
       </div>
       <div class="grid md:grid-cols-4 sm:grid-cols-3 lg:grid-cols-6 m-5 mb-10">
-              <div class="bg-pink-100 overflow-hidden m-1 p-3 rounded">
+              <div class="bg-pink-200 overflow-hidden m-1 p-3 rounded">
           <div class="m-2 text-justify text-sm">
               <h2 class="font-bold text-center text-lg h-2 mb-8">JAN </h2>
           </div>
       </div>
-            <div class="bg-pink-100 overflow-hidden m-1 p-3 rounded">
+            <div class="bg-pink-200 overflow-hidden m-1 p-3 rounded">
           <div class="m-2 text-justify text-sm">
               <h2 class="font-bold text-center text-lg h-2 mb-8">FEB</h2>
           </div>
       </div>
-      <div class="bg-pink-100 overflow-hidden m-1 p-3 rounded">
+      <div class="bg-pink-200 overflow-hidden m-1 p-3 rounded">
         <div class="m-2 text-justify text-sm">
             <h2 class="font-bold text-center text-lg h-2 mb-8">MAR</h2>
         </div>
@@ -451,22 +444,22 @@
           <h2 class="font-bold text-center text-lg h-2 mb-8">AGU</h2>
       </div>
     </div>
-    <div class="bg-pink-100 overflow-hidden m-1 p-3 rounded">
+    <div class="bg-pink-200 overflow-hidden m-1 p-3 rounded">
           <div class="m-2 text-justify text-sm">
               <h2 class="font-bold text-center text-lg h-2 mb-8">SEP</h2>
           </div>
       </div>
-            <div class="bg-pink-100 overflow-hidden m-1 p-3 rounded">
+            <div class="bg-pink-200 overflow-hidden m-1 p-3 rounded">
           <div class="m-2 text-justify text-sm">
               <h2 class="font-bold text-center text-lg h-2 mb-8">OKT</h2>
           </div>
       </div>
-      <div class="bg-pink-100 overflow-hidden m-1 p-3 rounded">
+      <div class="bg-pink-200 overflow-hidden m-1 p-3 rounded">
         <div class="m-2 text-justify text-sm">
             <h2 class="font-bold text-center text-lg h-2 mb-8">NOV</h2>
         </div>
     </div>
-    <div class="bg-pink-100 overflow-hidden m-1 p-3 rounded">
+    <div class="bg-pink-200 overflow-hidden m-1 p-3 rounded">
         <div class="m-2 text-justify text-sm">
             <h2 class="font-bold text-center text-lg h-2 mb-8">DES</h2>
         </div>
@@ -479,7 +472,7 @@
     <!-- Kelebihan Kekurangan -->
   <div class="lg:p-80 lg:pb-10 lg:pt-10 pb-10 pt-10">
     <div class="grid grid-cols-2 m-5 mb-5">
-              <div class="bg-green-100 overflow-hidden m-5 p-5 rounded shadow-md">
+              <div class="bg-green-200 overflow-hidden m-5 p-5 rounded shadow-md">
           <div class="m-2 text-justify text-sm">
               <h2 class="font-bold text-xl h-2 mb-8 text">Kelebihan</h2><br>
               <div class="mb-3">
@@ -488,7 +481,7 @@
                 <div class="pb-6 md:pb-0 flex flex-col"><div><label class="bg-white input-field inline-flex items-baseline border-none shadow-md bg-white p-4 rounded"><span class="flex-none text-dusty-blue-darker select-none leading-none">Tanaman cepat tumbuh</span></label></div></div></div>
           </div>
       </div>
-            <div class="bg-red-100 overflow-hidden m-5 p-5 rounded shadow-md">
+            <div class="bg-pink-200 overflow-hidden m-5 p-5 rounded shadow-md">
           <div class="m-2 text-justify text-sm">
               <h2 class="font-bold text-xl h-2 mb-8">Kekurangan</h2><br>
               <div class="mb-3">
@@ -500,6 +493,14 @@
     </div>
   </div>
 
+  <div class="mb-10 bg-gradient-to-tl to-blue-500 text-white font-semibold flex flex-col">
+    <div class="flex flex-row-reverse flex-wrap m-auto">
+      <button class="rounded px-3 py-2 m-1 border-b-4 border-l-2 shadow-lg bg-green-600 border-green-900 text-white" onclick="document.location='growthprogressPembibitan.html'">
+          Progress Pertumbuhan Tanaman
+      </button>
+    </div>
+  </div>
+  
   <h1 class="mt-2 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900">Alat Berkebun Yang Dibutuhkan</h1>
   <div class="flex items-center justify-center">
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
@@ -735,13 +736,6 @@
     </div>
   </div>
 </div>
-<div class="bg-gradient-to-tl to-blue-500 text-white font-mono flex flex-col">
-	<div class="flex flex-row-reverse flex-wrap m-auto">
-    <button class="rounded px-3 py-2 m-1 border-b-4 border-l-2 shadow-lg bg-green-600 border-green-900 text-white">
-        Progress Pertumbuhan Tanaman
-    </button>
-	</div>
-</div>
 
     <!-- PUNYA RENDRA -->
 			<!--Footer-->
@@ -757,19 +751,19 @@
 						</defs>
 						<rect id="ETI-Logo" width="160" height="57" fill="url(#pattern)" />
 					  </svg>
-					  <p class="opacity-60">Website UMKM Produk Tanaman dan Alat Berkebun di Surabaya.</p>
+					  <p class="opacity-100">Website UMKM Produk Tanaman dan Alat Berkebun di Surabaya.</p>
 					</div>
 					<div class="w-full sm:w-1/5 flex flex-col space-y-4">
-					  <a class="opacity-60"><b>Informasi</b></a>
-					  <a class="opacity-60">Tentang Kami</a>
-					  <a class="opacity-60">Mitra Kami</a>
-					  <a class="opacity-60">Privacy Policy</a>
-					  <a class="opacity-60">Syarat dan Kebijakan</a>
+					  <a class="opacity-100"><b>Informasi</b></a>
+					  <a class="opacity-100">Tentang Kami</a>
+					  <a class="opacity-100">Mitra Kami</a>
+					  <a class="opacity-100">Privacy Policy</a>
+					  <a class="opacity-100">Syarat dan Kebijakan</a>
 					</div>
 					<div class="w-full sm:w-1/5 flex flex-col space-y-4">
-					  <a class="opacity-60"><b>Produk dan Layanan</b></a>
-					  <a class="opacity-60">Tanaman</a>
-					  <a class="opacity-60">Alat Berkebun</a>
+					  <a class="opacity-100"><b>Produk dan Layanan</b></a>
+					  <a class="opacity-100">Tanaman</a>
+					  <a class="opacity-100">Alat Berkebun</a>
 					</div>
 					<div class="w-full sm:w-1/5 pt-6 flex items-end mb-1">
 					  <div class="flex flex-row space-x-4">
@@ -778,7 +772,7 @@
 					  </div>
 					</div>
 				  </div>
-				  <div class="opacity-60 pt-2">
+				  <div class="opacity-100 pt-2">
 					<p>© 2021 Tim Gardening Bisnis Digital.</p>
 				  </div>
 				</div>
