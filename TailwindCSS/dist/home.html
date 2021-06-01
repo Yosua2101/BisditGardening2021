@@ -85,6 +85,38 @@
         .subnav:hover .subnav-content {
         display: block;
         }
+        
+        .fill {
+
+            position: relative;
+            height: 150px;
+            width: 150px;
+            top : 5px;
+            left: 5px;
+            cursor: pointer;
+        }
+
+        .empty {
+            display: inline-block;
+            height: 160px;
+            width: 160px;
+            margin: 10px;
+            border: black 2px;
+            background-color:goldenrod;
+        }
+
+        .hold {
+            border: solid black 2px;
+        }
+
+        .hovered {
+            background:palegoldenrod;
+            border-style: dashed;
+        }
+
+        .invisible {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -342,19 +374,49 @@
 <!-- telusuri alat berkebun-->
 <div class="pt-20 pb-10">
     <h1 class="text-3xl text-center text-green-800 md:text-3xl font-bold mb-2">Telusuri Alat Berkebun</h1>
-    <div class="grid grid-cols-1 justify-items-center">
-        <div>
-            <a class="inline-flex items-center h-8 px-4 m-2 text-sm text-white transition-colors bg-green-800 rounded-lg hover:bg-black" href="carialatberkebun.html">PUPUK</a>
-        </div>
-        <div>
-            <a class="inline-flex items-center h-8 px-4 m-2 text-sm text-white transition-colors bg-green-800 rounded-lg  hover:bg-black" href="carialatberkebun.html">POT</a>
-        </div>
-        <div>
-            <a class="inline-flex items-center h-8 px-4 m-2 text-sm text-white transition-colors  bg-green-800 rounded-lg hover:bg-black" href="carialatberkebun.html">MEDIA TANAM</a>
-        </div>
-        <div>
-            <a class="inline-flex items-center h-8 px-4 m-2 text-sm text-white transition-colors  bg-green-800 rounded-lg hover:bg-black" href="carialatberkebun.html">ALAT ALAT</a>
-        </div>
+    <div class="pt-6 flex items-center justify-center">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
+        <!--PUPUK-->
+            <a href="home.html">
+            <div class="relative bg-green-800 rounded-3xl w-34 my-4 shadow-xl">
+                <div class="mt-8">
+                    <div class="flex">
+                        <p class="inline-flex text-right items-center h-14 px-14 m-2 text-lg text-gray-50 font-bold"> PUPUK </p>
+                    </div>
+                </div>
+            </div>  
+            </a> 
+        <!--POT-->
+        <a href="home.html">
+            <div class="relative bg-green-800 rounded-3xl w-34 my-4 shadow-xl">
+                <div class="mt-8">
+                    <div class="flex">
+                        <p class="inline-flex items-center h-14 px-16 m-2 text-lg text-gray-50 font-bold my-2"> POT </p>
+                    </div>
+                </div>
+            </div>  
+            </a> 
+        <!--MEDIA TANAM-->
+        <a href="home.html">
+            <div class="relative bg-green-800 rounded-3xl w-34 my-4 shadow-xl">
+                <div class="mt-8">
+                    <div class="flex">
+                        <p class="inline-flex items-center h-14 px-4 m-2 text-lg text-gray-50 font-bold my-2"> MEDIA TANAM </p>
+                    </div>
+                </div>
+            </div>  
+            </a> 
+        <!--ALAT-->
+        <a href="home.html">
+            <div class="relative bg-green-800 rounded-3xl w-34 my-4 shadow-xl">
+                <div class="mt-8">
+                    <div class="flex">
+                        <p class="inline-flex items-center h-14 px-8 m-2 text-lg text-gray-50 font-bold my-2"> ALAT-ALAT </p>
+                    </div>
+                </div>
+            </div>  
+            </a> 
+    </div>
     </div>
 </div>
 
@@ -415,10 +477,19 @@
 </div>
     
 <!-- galeri pajangan -->
-<div class> 
+<div class="pb-20"> 
 <h1 class="text-3xl text-center text-green-800 md:text-3xl font-bold mb-2">Galeri Pajangan</h1>
-<div>
-    
+<div class="flex items-center justify-center">
+<div class="empty">
+    <div class="fill" draggable="true" style="background-image: url('https://source.unsplash.com/miziNqvJx5M/150x150');">
+    </div>
+</div>
+<div class="empty">
+    <div class="fill" draggable="true" style="background-image: url('https://source.unsplash.com/iylxQ1e6sOA/150x150');">
+    </div>
+</div>
+<div class="empty"></div>
+<div class="empty"></div>     
 </div>
 </div>
 
@@ -470,6 +541,48 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js" integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- Scripts -->
+    <script>
+        const fill = document.querySelector('.fill');
+        const empties = document.querySelectorAll('.empty');
+
+        fill.addEventListener('dragstart', dragStart);
+        fill.addEventListener('dragend', dragEnd);
+
+        for(let empty of empties){
+            empty.addEventListener('dragover', dragOver);
+            empty.addEventListener('dragenter', dragEnter);
+            empty.addEventListener('dragleave', dragLeave);
+            empty.addEventListener('drop', dragDrop);
+        }
+
+        function dragStart() {
+            this.className += ' hold';
+            setTimeout(() => this.className = 'invisible', 0);
+        }
+
+        function dragEnd() {
+            this.className = 'fill';    
+        }
+
+        function dragOver(e){
+        e.preventDefault();
+        }
+
+        function dragEnter(e){
+        e.preventDefault();
+        this.className += ' hovered';
+        }
+
+        function dragLeave(){
+        this.className = 'empty';  
+        }
+
+        function dragDrop(){
+        this.className = 'empty';
+        this.append(fill);
+        }
+
+    </script>
     <script>
         let toggleBtn = document.querySelector("#navbar-toggle");
         let collapse = document.querySelector("#navbar-collapse");
