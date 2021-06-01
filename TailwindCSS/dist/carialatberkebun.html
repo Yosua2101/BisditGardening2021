@@ -82,11 +82,130 @@
 		color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */
 	  }
 	  
-		  </style>
+/* Navigation Menu */
+.navbar {
+overflow: hidden;
+background-color: #064e3b;
+}
+
+/* Navigation links */
+.navbar a {
+float: left;
+font-size: 16px;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+margin-top: 10px;
+margin-bottom: 0px;
+}
+
+/* The subnavigation menu */
+.subnav {
+float: left;
+overflow: hidden;
+}
+
+/* Subnav button */
+.subnav .subnavbtn {
+font-size: 16px;
+border: none;
+outline: none;
+color: white;
+padding: 14px 16px;
+background-color: inherit;
+font-family: inherit;
+margin: 0;
+margin-top: 10px;
+margin-bottom: 0px;
+}
+
+/* Add a red background color to navigation links on hover */
+.navbar a:hover, .subnav:hover .subnavbtn {
+background-color: #1e40af;
+}
+
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+display: none;
+position: absolute;
+left: 0;
+background-color: #064e3b;
+width: 100%;
+z-index: 1;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+float: left;
+color: white;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+background-color: #eee;
+color: black;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+display: block;
+background-color: #1e40af;
+}
+
+/* Style the search box inside the navigation bar */
+.navbar .search-container {
+  float: right;
+}
+
+.navbar input[type=text] {
+  padding: 6px 10px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  margin-right: 30px;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+}
+
+</style>
 	  <script src="https://kit.fontawesome.com/64de849d60.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-gray-200">
-	<nav class="flex items-center justify-between flex-wrap bg-green-900 py-4 lg:px-12 shadow border-solid border-t-2 border-green-800">
+<body class="bg-white">
+<!-- The navigation menu -->
+<div class="navbar">
+	<a href="home.html">Beranda</a>
+	<div class="subnav">
+	  <button class="subnavbtn">Tanaman <i class="fa fa-caret-down"></i></button>
+	  <div class="subnav-content">
+		<a href="caritanaman.html">Tanaman Hias</a>
+		<a href="tanamanbuah.html">Tanaman Buah</a>
+		<a href="tanamansayur.html">Tanaman Sayur</a>
+		<a href="toga.html">TOGA</a>
+	  </div>
+	</div>
+	<div class="subnav">
+	  <button class="subnavbtn">Alat Berkebun <i class="fa fa-caret-down"></i></button>
+	  <div class="subnav-content">
+		<a href="#">Pupuk</a>
+		<a href="#">Pot</a>
+		<a href="#">Media Tanam</a>
+		<a href="#">Alat-alat</a>
+	  </div>
+	</div>
+	  <a href="listmitra.html">Mitra</a>
+	  <!--Search bar-->
+	  <div class="search-container">
+		<form action="/action_page.php">
+		  <input type="text" placeholder="Cari" name="search">
+		</form>
+	  </div>
+  </div> 
+
+	<!--<nav class="flex items-center justify-between flex-wrap bg-green-900 py-4 lg:px-12 shadow border-solid border-t-2 border-green-800">
 		<div class="flex justify-between lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-white pb-5 lg:pb-0">
 			<div class="block lg:hidden ">
 				<button
@@ -114,7 +233,6 @@
 				  Alat Berkebun
 				</a>
 			</div>
-			<!-- This is an example component -->
 			<div class="relative mx-auto text-gray-600 lg:block hidden">
 				<input
 					class="border-2 border-gray-300 bg-white h-10 pl-2 pr-8 rounded-lg text-sm focus:outline-none"
@@ -165,7 +283,7 @@
 				</button>
 			</div>
 		</div>
-	</nav>
+	</nav> -->
 			<div class="bg-grey col-12 mt-3 align-middle justify-content-center flex" >
 				<button type="button" class="btn btn-light mr-10 shadow-sm" data-toggle="collapse" data-target="#filters">Filters <i class="fa fa-filter"></i></button>
 				<input type="text" class="col-8 border-2 p-2" placeholder="Cari Alat Berkebun" id="search-filter">
