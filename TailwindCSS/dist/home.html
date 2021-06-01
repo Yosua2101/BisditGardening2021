@@ -38,10 +38,77 @@
             cursor: pointer;
             display: inline-block;
         }
+        .navbar {
+        overflow: hidden;
+        background-color: #064e3b;
+        }
+  
+        /* Navigation links */
+        .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+  
+        /* The subnavigation menu */
+        .subnav {
+        float: left;
+        overflow: hidden;
+        }
+  
+        /* Subnav button */
+        .subnav .subnavbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+        }
+  
+        /* Add a red background color to navigation links on hover */
+        .navbar a:hover, .subnav:hover .subnavbtn {
+        background-color: #1e40af;
+        }
+  
+        /* Style the subnav content - positioned absolute */
+        .subnav-content {
+        display: none;
+        position: absolute;
+        left: 0;
+        background-color: #064e3b;
+        width: 100%;
+        z-index: 1;
+        }
+  
+        /* Style the subnav links */
+        .subnav-content a {
+        float: left;
+        color: white;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        }
+  
+        /* Add a grey background color on hover */
+        .subnav-content a:hover {
+        background-color: #eee;
+        color: black;
+        }
+
+        /* When you move the mouse over the subnav container, open the subnav content */
+        .subnav:hover .subnav-content {
+        display: block;
+        }
     </style>
 </head>
 <body>
-    <div class="header-2">
+    <!--<div class="header-2">
         <nav class="flex items-center justify-between flex-wrap bg-green-900 py-4 lg:px-12 shadow border-solid border-t-2 border-green-800">
             <div class="flex justify-between lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-white pb-5 lg:pb-0">
                 <div class="block lg:hidden ">
@@ -70,7 +137,7 @@
                       Alat Berkebun
                     </a>
                 </div>
-                <!-- This is an example component -->
+                
                 <div class="relative mx-auto text-gray-600 lg:block hidden">
                     <input
                         class="border-2 border-gray-300 bg-white h-10 pl-2 pr-8 rounded-lg text-sm focus:outline-none"
@@ -136,8 +203,33 @@
                 </div>
             </div>
         </div>
+    </div>-->
+
+<!-- The navigation menu -->
+<div class="navbar">
+    <a href="home.html">Beranda</a>
+    <div class="subnav">
+      <button class="subnavbtn">Tanaman <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="caritanaman.html">Tanaman Hias</a>
+        <a href="tanamanbuah.html">Tanaman Buah</a>
+        <a href="tanamansayur.html">Tanaman Sayur</a>
+        <a href="toga.html">TOGA</a>
+      </div>
     </div>
-<!--tanaman terlaris-->    
+    <div class="subnav">
+      <button class="subnavbtn">Alat Berkebun <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="#">Pupuk</a>
+        <a href="#">Pot</a>
+        <a href="#">Media Tanam</a>
+        <a href="#">Alat-alat</a>
+      </div>
+    </div>
+      <a href="listmitra.html">Mitra</a>
+  </div>
+
+<!--tanaman terlaris--> 
 
     <h1 class="text-3xl text-center text-green-800 md:text-3xl font-medium mb-2 py-8">Telusuri Tanaman Terlaris per Kategori</h1>
 
@@ -358,14 +450,14 @@
         <div class="w-full sm:w-1/5 flex flex-col space-y-4">
           <a class="opacity-60"><b>Informasi</b></a>
           <a class="opacity-60">Tentang Kami</a>
-          <a class="opacity-60">Mitra Kami</a>
+          <a class="opacity-60" href="listmitra.html">Mitra Kami</a>
           <a class="opacity-60">Privacy Policy</a>
           <a class="opacity-60">Syarat dan Kebijakan</a>
         </div>
         <div class="w-full sm:w-1/5 flex flex-col space-y-4">
           <a class="opacity-60"><b>Produk dan Layanan</b></a>
-          <a class="opacity-60">Tanaman</a>
-          <a class="opacity-60">Alat Berkebun</a>
+          <a class="opacity-60" href="caritanaman.html">Tanaman</a>
+          <a class="opacity-60" href="carialatberkebun.html">Alat Berkebun</a>
         </div>
         <div class="w-full sm:w-1/5 pt-6 flex items-end mb-1">
           <div class="flex flex-row space-x-4">
