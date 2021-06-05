@@ -117,38 +117,6 @@
         border: none;
         border-radius: 10px;
         }
-
-        .fill {
-
-            position: relative;
-            height: 150px;
-            width: 150px;
-            top : 5px;
-            left: 5px;
-            cursor: pointer;
-        }
-
-        .empty {
-            display: inline-block;
-            height: 160px;
-            width: 160px;
-            margin: 10px;
-            border: black 2px;
-            background-color:goldenrod;
-        }
-
-        .hold {
-            border: solid black 2px;
-        }
-
-        .hovered {
-            background:palegoldenrod;
-            border-style: dashed;
-        }
-
-        .invisible {
-            display: none;
-        }
     </style>
 </head>
 <body>
@@ -184,18 +152,8 @@
 
 
     <!-- temukan tanaman terbaik -->
-    <div class="bg-gradient-to-r from-yellow-500 via-yellow-700 to-yellow-900 py-96 md:py-24">
-            <div class="container px-6 mx-auto">
-
-                <div class="text-center max-w-2xl mx-auto">
-                    <h1 class="text-3xl text-white md:text-2xl font-semibold mb-2">TEMUKAN TANAMAN TERBAIK YANG KAMU INGINKAN</h1>
-                    <a class="inline-flex items-center h-8 px-4 m-2 text-sm text-white transition-colors duration-150 bg-green-800 rounded-lg focus:shadow-outline hover:bg-black" href="caritanaman.html">CARI SEKARANG</a>
-                    <div class="mt-4">
-                        <img src="" class="d-block max-w-full">
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="bg-cover bg-center bg-opacity-70" style="background-image:url(img/plant.jpg)" pt-96>
+        <h1 class="text-center text-white md:text-3xl sm:text-2xl xs:text-xl font-bold mb-2 py-64">TEMUKAN TANAMAN TERBAIK YANG KAMU INGINKAN</h1>
     </div>
 
 
@@ -205,7 +163,7 @@
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
           <!-- 1 card -->
           <a href="detailtanaman.html">
-          <div class="relative bg-white py-6 px-6 rounded-3xl w-64 my-4 shadow-xl">
+          <div class="relative bg-white py-6 px-6 rounded-3xl w-64 my-4 shadow-xl transition-colors duration-150 hover:bg-green-100">
               <div class="mt-8">
                   <div class="flex space-x-2">
                       <img src="img/pilo.png" 
@@ -256,7 +214,7 @@
     
           <!--card 2-->
           <a href="detailtanaman.html">
-          <div class="relative bg-white py-6 px-6 rounded-3xl w-64 my-4 shadow-xl">
+          <div class="relative bg-white py-6 px-6 rounded-3xl w-64 my-4 shadow-xl transition-colors duration-150 hover:bg-green-100">
               <div class="mt-8">
                   <div class="flex space-x-2">
                       <img src="img/epis.png" 
@@ -307,7 +265,7 @@
     
           <!--card 3-->
           <a href="detailtanaman.html">
-          <div class="relative bg-white py-6 px-6 rounded-3xl w-64 my-4 shadow-xl">
+          <div class="relative bg-white py-6 px-6 rounded-3xl w-64 my-4 shadow-xl transition-colors duration-150 hover:bg-green-100">
               <div class="mt-8">
                   <div class="flex space-x-2">
                       <img src="img/peperomia.png" 
@@ -358,7 +316,7 @@
     
           <!--card 4-->
           <a href="detailtanaman.html">
-          <div class="relative bg-white py-6 px-6 rounded-3xl w-64 my-4 shadow-xl">
+          <div class="relative bg-white py-6 px-6 rounded-3xl w-64 my-4 shadow-xl transition-colors duration-150 hover:bg-green-100">
               <div class="mt-8">
                   <div class="flex space-x-2">
                       <img src="img/keladi.png" 
@@ -410,15 +368,66 @@
 
       </div>
     </div>
+    
+<!-- telusuri tanaman-->
+<div class="pt-16 pb-10 px-28">
+    <h1 class="text-3xl text-center text-green-800 md:text-3xl font-bold mb-2">Telusuri Tanaman</h1>
+    <div class="pt-6 flex items-center justify-center">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
+        <!--tanaman hias-->
+            <a href="pupuk.html">
+            <div class="relative bg-green-800 rounded-3xl w-34 my-4 shadow-xl transition-colors duration-150 hover:bg-yellow-800">
+                <div class="mt-8">
+                    <div class="flex">
+                        <p class="inline-flex items-center h-14 px-10 m-2 text-lg text-gray-50 font-bold"> TANAMAN HIAS </p>
+                    </div>
+                </div>
+            </div>  
+            </a> 
+        <!--tanaman buah-->
+        <a href="pot.html">
+            <div class="relative bg-green-800 rounded-3xl w-34 my-4 shadow-xl transition-colors duration-150 hover:bg-yellow-800">
+                <div class="mt-8">
+                    <div class="flex">
+                        <p class="inline-flex items-center h-14 px-9 m-2 text-lg text-gray-50 font-bold my-2"> TANAMAN BUAH </p>
+                    </div>
+                </div>
+            </div>  
+            </a> 
+        <!--tanaman sayur-->
+        <a href="mediatanam.html">
+            <div class="relative bg-green-800 rounded-3xl w-34 my-4 shadow-xl transition-colors duration-150 hover:bg-yellow-800">
+                <div class="mt-8">
+                    <div class="flex">
+                        <p class="inline-flex items-center h-14 px-8 m-2 text-lg text-gray-50 font-bold my-2"> TANAMAN SAYUR </p>
+                    </div>
+                </div>
+            </div>  
+            </a> 
+        <!--toga-->
+        <a href="alatalat.html">
+            <div class="relative bg-green-800 rounded-3xl w-34 my-4 shadow-xl transition-colors duration-150 hover:bg-yellow-800">
+                <div class="mt-8">
+                    <div class="flex">
+                        <p class="inline-flex items-center h-14 px-20 m-2 text-lg text-gray-50 font-bold my-2"> TOGA </p>
+                    </div>
+                </div>
+            </div>  
+            </a> 
+    </div>
+    </div>
+</div>
+    
+ 
   
 <!-- telusuri alat berkebun-->
-<div class="pt-20 pb-10">
+<div class="pt-16 pb-10">
     <h1 class="text-3xl text-center text-green-800 md:text-3xl font-bold mb-2">Telusuri Alat Berkebun</h1>
     <div class="pt-6 flex items-center justify-center">
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
         <!--PUPUK-->
             <a href="pupuk.html">
-            <div class="relative bg-green-800 rounded-3xl w-34 my-4 shadow-xl">
+            <div class="relative bg-green-800 rounded-3xl w-34 my-4 shadow-xl transition-colors duration-150 hover:bg-yellow-800">
                 <div class="mt-8">
                     <div class="flex">
                         <p class="inline-flex text-right items-center h-14 px-14 m-2 text-lg text-gray-50 font-bold"> PUPUK </p>
@@ -428,7 +437,7 @@
             </a> 
         <!--POT-->
         <a href="pot.html">
-            <div class="relative bg-green-800 rounded-3xl w-34 my-4 shadow-xl">
+            <div class="relative bg-green-800 rounded-3xl w-34 my-4 shadow-xl transition-colors duration-150 hover:bg-yellow-800">
                 <div class="mt-8">
                     <div class="flex">
                         <p class="inline-flex items-center h-14 px-16 m-2 text-lg text-gray-50 font-bold my-2"> POT </p>
@@ -438,7 +447,7 @@
             </a> 
         <!--MEDIA TANAM-->
         <a href="mediatanam.html">
-            <div class="relative bg-green-800 rounded-3xl w-34 my-4 shadow-xl">
+            <div class="relative bg-green-800 rounded-3xl w-34 my-4 shadow-xl transition-colors duration-150 hover:bg-yellow-800">
                 <div class="mt-8">
                     <div class="flex">
                         <p class="inline-flex items-center h-14 px-4 m-2 text-lg text-gray-50 font-bold my-2"> MEDIA TANAM </p>
@@ -448,7 +457,7 @@
             </a> 
         <!--ALAT-->
         <a href="alatalat.html">
-            <div class="relative bg-green-800 rounded-3xl w-34 my-4 shadow-xl">
+            <div class="relative bg-green-800 rounded-3xl w-34 my-4 shadow-xl transition-colors duration-150 hover:bg-yellow-800">
                 <div class="mt-8">
                     <div class="flex">
                         <p class="inline-flex items-center h-14 px-8 m-2 text-lg text-gray-50 font-bold my-2"> ALAT-ALAT </p>
@@ -459,10 +468,62 @@
     </div>
     </div>
 </div>
+    
+<!-- galeri pajangan -->
+<div class="pt-16 pb-20"> 
+<h1 class="text-3xl text-center text-green-800 md:text-3xl font-bold mb-2">Galeri Pajangan</h1>
+<div class="flex items-center justify-center px-10">
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+        <!-- 1 card -->
+        <div class="relative rounded-3xl my-4">
+            <div class="mt-5">
+                <div class="flex">
+                    <img src="img/rsz_1.png" class= "w-auto" style="border-radius: 5%">
+
+                </div>
+            </div>
+        </div>  
+       
+        <!--list-->
+        <div class="grid-rows-3 grid-flow-col mt-10">
+        <div class= "relative rounded-3xl my-4">
+                <div class="space-x-2">
+                    <p class="items-center h-14 px-4 text-xl text-black font-bold"> Keterangan Tanaman dalam Foto</p>
+                      <!--list tanaman-->
+                </div>
+        <a href="detailtanaman.html">
+            <div class="relative bg-black rounded-3xl my-1 shadow-xl transition-colors duration-150 hover:bg-green-800">
+                <div class="mt-5">
+                        <p class="items-center pt-3 h-14 px-4 m-2 text-lg text-gray-50 font-bold my-2">  1. Lidah Mertua "Silverqueen" </p>
+                </div>
+            </div>  
+        </a> 
+          <!--list tanaman-->
+        <a href="detailtanaman.html">
+            <div class="relative bg-black rounded-3xl my-4 shadow-xl transition-colors duration-150 hover:bg-green-800">
+                <div class="mt-5">
+                        <p class="items-center pt-3 h-14 px-4 m-2 text-lg text-gray-50 font-bold my-2">  2. Tumbuhan Pakis </p>
+                    </div>
+            </div>  
+        </a> 
+              <!--list tanaman-->
+        <a href="detailtanaman.html">
+            <div class="relative bg-black rounded-3xl my-4 shadow-xl transition-colors duration-150 hover:bg-green-800">
+                <div class="mt-5">
+                  
+                        <p class="items-center pt-3 h-14 px-4 m-2 text-lg text-gray-50 font-bold my-2">  3. Karet Merah </p>
+                </div>
+            </div>
+        </a> 
+        </div>
+        </div>
+    </div>
+</div>
+</div>
 
 <!-- telusuri mitra-->
 <div class="pt-12 pb-20">
-    <h1 class="text-3xl text-center text-green-800 md:text-3xl font-bold mb-2">Telusuri UMKM Berkebun di Surabaya</h1>
+    <h1 class="text-3xl text-center text-green-800 md:text-3xl font-bold mb-2">Telusuri UMKM Berkebun</h1>
     <div class="flex items-center justify-center">
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
             <!-- 1 card -->
@@ -515,24 +576,7 @@
         </div>
     </div>
 </div>
-    
-<!-- galeri pajangan -->
-<div class="pb-20"> 
-<h1 class="text-3xl text-center text-green-800 md:text-3xl font-bold mb-2">Galeri Pajangan</h1>
-<div class="flex items-center justify-center">
-<div class="empty">
-    <div class="fill" draggable="true" style="background-image: url('https://source.unsplash.com/miziNqvJx5M/150x150');">
-    </div>
-</div>
-<div class="empty">
-    <div class="fill" draggable="true" style="background-image: url('https://source.unsplash.com/iylxQ1e6sOA/150x150');">
-    </div>
-</div>
-<div class="empty"></div>
-<div class="empty"></div>     
-</div>
-</div>
-
+ 
 <!--Footer-->
 <div class="w-full bg-green-900 text-white">
     <div class="xl:px-40 pb-12 lg:px-20 md:px-10 sm:px-5 px-10">
@@ -580,57 +624,5 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js" integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<!-- Scripts -->
-    <script>
-        const fill = document.querySelector('.fill');
-        const empties = document.querySelectorAll('.empty');
-
-        fill.addEventListener('dragstart', dragStart);
-        fill.addEventListener('dragend', dragEnd);
-
-        for(let empty of empties){
-            empty.addEventListener('dragover', dragOver);
-            empty.addEventListener('dragenter', dragEnter);
-            empty.addEventListener('dragleave', dragLeave);
-            empty.addEventListener('drop', dragDrop);
-        }
-
-        function dragStart() {
-            this.className += ' hold';
-            setTimeout(() => this.className = 'invisible', 0);
-        }
-
-        function dragEnd() {
-            this.className = 'fill';    
-        }
-
-        function dragOver(e){
-        e.preventDefault();
-        }
-
-        function dragEnter(e){
-        e.preventDefault();
-        this.className += ' hovered';
-        }
-
-        function dragLeave(){
-        this.className = 'empty';  
-        }
-
-        function dragDrop(){
-        this.className = 'empty';
-        this.append(fill);
-        }
-
-    </script>
-    <script>
-        let toggleBtn = document.querySelector("#navbar-toggle");
-        let collapse = document.querySelector("#navbar-collapse");
-
-        toggleBtn.onclick = () => {
-            collapse.classList.toggle("hidden");
-            collapse.classList.toggle("flex");
-        };
-    </script>
 </body>
 </html>
