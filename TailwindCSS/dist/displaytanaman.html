@@ -434,7 +434,14 @@
         }
     </script>
     <script>
-   
+        let card = document.getElementsByClassName("card");
+
+        let display = document.getElementsByClassName("display")[0];
+        let image = document.getElementsByClassName("image");
+        for (let i = 0; i < card.length; i++) {
+            card[i].addEventListener("click", function () {
+                display.getElementsByClassName("active")[0].classList.remove("active");
+                image[i].classList.add("active")
 
             })
         }
